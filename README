@@ -2,3 +2,9 @@ HEPP
 ====
 
 HEPP Project.
+
+Liam:
+I've included a Makefile, so 'make' should compile the source into pdf properly,
+and 'make clean' should clean up after.
+
+
