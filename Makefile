@@ -1,9 +1,11 @@
 PDF=pdflatex
-SOURCE=main.tex
+BIB=bibtex
+SRC=main
 
-
+# We have to compile twice and bibtex and recompile for references to work.
 all:
-	${PDF} ${SOURCE}
-
-clean:
-	rm -f main.pdf main.aux main.toc main.log
+	${PDF} ${SRC}.tex
+	${PDF} ${SRC}.tex
+	${BIB} ${SRC}.aux
+	${PDF} ${SRC}.tex
+	${PDF} ${SRC}.tex
